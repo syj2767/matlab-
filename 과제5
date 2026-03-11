@@ -1,0 +1,16 @@
+x = 0 : 0.01 : 2;
+
+u = 3*log10(70.*x+1);
+v = 4*cos(7.*x);
+
+figure
+
+subplot(2,1,1)
+plot(x,u)
+xlabel('mile')
+ylabel('velocity')
+
+subplot(2,1,2)
+plot(x,v)
+xlabel('mile')
+ylabel('velocity')
