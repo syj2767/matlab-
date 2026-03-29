@@ -1,0 +1,26 @@
+문제 3-(a),(b)
+A = pi*R.*sqrt(R.^2+(3*V./(pi*R.^2)).^2)
+syj_22011201_func_3.m
+
+문제 3-(C)
+clc;
+clear;
+global V;
+V = 10;
+[rval,Amin] = fminbnd(@syj_22011201_func_3,0.01,10)
+ 최소화하는 r값 = rval, 상응하는 높이 = nice_h
+nice_h=3*V/(pi*rval.^2)
+
+fplot(@syj_22011201_func_3,[0.01, 10])
+grid on
+xlabel('r')
+ylabel('A')
+
+
+A_target = Amin*1.1
+f =  @(r) syj_22011201_func_3(r) - A_target;
+r_left = fzero(f,[0.5, rval])
+r_right =fzero(f,[rval,3.5])
+r_ans_right = r_right-rval
+r_ans_left = rval-r_left
+벗어날 수 있는 값 = 오른쪽으로r_ans_right, 왼쪽으로 r_ans_left
