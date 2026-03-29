@@ -1,0 +1,15 @@
+문제 1
+clc;
+clear;
+zero1=fzero(@syj_22011201_func_1,[0 1])
+zero2=fzero(@syj_22011201_func_1,[1 2])
+min=fminbnd(@syj_22011201_func_1,0,4)
+fplot(@syj_22011201_func_1)
+grid on
+fprime = @(x) 0.3 - 2*cos(2.*x);
+x1 =acos(0.15)/2
+x2 =(2*pi-acos(0.15))/2
+syj_22011201_func_1(0)
+syj_22011201_func_1(4)
+syj_22011201_func_1(x1)
+syj_22011201_func_1(x2)
