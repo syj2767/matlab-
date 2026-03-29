@@ -1,0 +1,11 @@
+문제 6
+f = @(x) x.^2;
+g = @(y) 3*cos(y);
+h = @(z) 6*exp(z);
+
+ansf = @(x) h(g(f(x)));
+
+fplot(ansf, [0 4])
+grid on
+xlabel('x')
+ylabel('6e^(3cos(x^2))')
