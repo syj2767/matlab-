@@ -1,0 +1,16 @@
+name= input("이름",'s');
+score = input("점수");
+avg = mean(score)
+fprintf('이름: %s' , name);
+disp(['점수: ' , num2str(score)]);
+fprintf('평균 점수: %.2f\n', avg);
+if avg >= 90
+    grade = 'Excellent';
+elseif avg >= 80
+    grade = 'Good';
+elseif avg >= 70
+    grade = 'Fair';
+else
+    grade = 'Needs Improvement';
+end
+disp(['grade = ',num2str(grade)])
