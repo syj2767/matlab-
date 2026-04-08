@@ -1,0 +1,21 @@
+x = [-2 -1 0 1 2]
+squareVec(x)
+meanVec(x)
+mixedTransform(x)
+function one = squareVec(x)
+one = x.^2;
+end
+
+function two = meanVec(x)
+two = mean(x);
+end
+function three = mixedTransform(x)
+three = zeros(size(x));
+set1 = find(x>0);
+three(set1) = 2.*x(set1)+1;
+set2 = find(x==0);
+three(set2) = 0;
+set3=find(x<0);
+three(set3) = abs(x(set3));
+end
+
