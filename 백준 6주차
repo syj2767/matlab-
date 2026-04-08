@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void) 
+{
+	int a,c;
+	int arr[100];
+	int acount = 0;
+	scanf("%d", &a);
+	for (int i = 0;i < a ; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	scanf("%d", &c);
+	for (int i = 0;i < a;i++)
+	{
+		if (arr[i] == c)
+		{
+			acount += 1;
+		}
+
+	}
+	printf("%d", acount);
+	return 0;
+}
